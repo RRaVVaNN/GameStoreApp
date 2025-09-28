@@ -17,7 +17,7 @@ class HomeController: UIViewController, UITextFieldDelegate {
     private var currentCategory: Category = .all
     private var filteredGames: [Game] {
         if currentCategory != .all {
-            allGames.filter { $0.category == currentCategory.rawValue }
+            allGames.filter { $0.category.contains(currentCategory) }
         } else {
             allGames
         }

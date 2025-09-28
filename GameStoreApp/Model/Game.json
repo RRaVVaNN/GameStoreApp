@@ -1,84 +1,84 @@
 [
     {
         "title": "GTA V",
-        "category": "Popular",
+        "category": ["popular"],
         "price": "$20.00",
         "imageName": "gtav",
         "about": "Welcome to Los Santos. When a young street hustler, a retired bank robber, and a terrifying psychopath find themselves entangled with the most dangerous elements of the underworld, they must pull off a series of dangerous heists to survive in a ruthless city."
     },
     {
         "title": "CS:GO",
-        "category": "Popular",
+        "category": ["popular","free"],
         "price": "$0.00",
         "imageName": "csgo",
         "about": "Counter-Strike: Global Offensive expands on the team-based action gameplay that it pioneered more than 20 years ago."
     },
     {
         "title": "Hollow Knight",
-        "category": "Popular",
+        "category": ["popular","indie"],
         "price": "$10.00",
         "imageName": "hollowknight",
         "about": "The sequel to the award-winning action-adventure. Explore a vast haunted kingdom and fight deadly foes as Hornet."
     },
     {
         "title": "Elden Ring",
-        "category": "Trending",
+        "category": ["trending"],
         "price": "$59.99",
         "imageName": "eldenring",
         "about": "An epic fantasy action-RPG adventure set within a world created by Hidetaka Miyazaki and George R. R. Martin."
     },
     {
         "title": "Valorant",
-        "category": "Trending",
+        "category": ["trending","free"],
         "price": "$0.00",
         "imageName": "valorant",
         "about": "A 5v5 character-based tactical shooter from Riot Games. Combine precise gunplay with unique agent abilities."
     },
     {
         "title": "Stardew Valley",
-        "category": "Indie",
+        "category": ["indie"],
         "price": "$14.99",
         "imageName": "stardewvalley",
         "about": "Turn an overgrown field into a thriving farm. Raise animals, grow crops, and become part of the community."
     },
     {
         "title": "Minecraft",
-        "category": "Popular",
+        "category": ["popular"],
         "price": "$26.95",
         "imageName": "minecraft",
         "about": "A sandbox game where you can explore infinite worlds and build everything from simple houses to grand castles."
     },
     {
         "title": "Forza Horizon 5",
-        "category": "New Launch",
+        "category": ["newLaunch"],
         "price": "$49.99",
         "imageName": "forzahorizon5",
         "about": "Explore the vibrant open world landscapes of Mexico with limitless, fun driving action in hundreds of cars."
     },
     {
         "title": "Dead Cells",
-        "category": "Indie",
+        "category": ["indie"],
         "price": "$12.00",
         "imageName": "deadcells",
         "about": "A rogue-lite, metroidvania-inspired action-platformer. Explore a sprawling, ever-changing castle."
     },
     {
         "title": "Cyberpunk 2077",
-        "category": "Popular",
+        "category": ["popular"],
         "price": "$29.99",
         "imageName": "cyberpunk2077",
         "about": "An open-world, action-adventure story set in Night City, a megalopolis obsessed with power, glamour, and body modification."
     },
     {
         "title": "Overwatch 2",
-        "category": "New Launch",
+        "category": ["newLaunch","free"],
         "price": "$0.00",
         "imageName": "overwatch2",
         "about": "Team up in this free-to-play hero shooter to push the payload and capture objectives with your friends."
     },
     {
         "title": "Rocket League",
-        "category": "Free",
+        "category": ["free"],
         "price": "$0.00",
         "imageName": "rocketleague",
         "about": "Soccer meets driving in this award-winning, high-powered hybrid of arcade-style soccer and vehicular mayhem!"

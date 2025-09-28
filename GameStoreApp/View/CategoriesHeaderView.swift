@@ -51,7 +51,7 @@ extension CategoriesHeaderView: UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let text = categories[indexPath.item].rawValue
+        let text = categories[indexPath.item].displayName
         let width = (text as NSString).size(withAttributes: [.font: UIFont.systemFont(ofSize: 16)]).width
         return .init(width: width + 24, height: collectionView.bounds.height)
     }

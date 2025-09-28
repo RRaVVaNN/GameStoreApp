@@ -18,7 +18,7 @@ class CategoryCell: UICollectionViewCell {
     }
 
     func configure(category: Category, isSelected: Bool) {
-        titleLabel.text = category.rawValue
+        titleLabel.text = category.displayName
         titleLabel.textColor = isSelected
         ? .systemYellow
         : .lightGray

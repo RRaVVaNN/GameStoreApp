@@ -12,7 +12,7 @@ class GameController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var infoLabel: UILabel!
     
-    var gameInfo : Game = .init(title: "", category: "", price: "", imageName: "", about: "")
+    var gameInfo : Game = .init(title: "", category: [], price: "", imageName: "", about: "")
     
     override func viewDidLoad() {
         super.viewDidLoad()
