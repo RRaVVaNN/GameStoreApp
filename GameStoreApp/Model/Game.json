@@ -4,83 +4,159 @@
         "category": ["popular"],
         "price": "$20.00",
         "imageName": "gtav",
-        "about": "Welcome to Los Santos. When a young street hustler, a retired bank robber, and a terrifying psychopath find themselves entangled with the most dangerous elements of the underworld, they must pull off a series of dangerous heists to survive in a ruthless city."
+        "about": "Welcome to Los Santos. When a young street hustler, a retired bank robber, and a terrifying psychopath find themselves entangled with the most dangerous elements of the underworld, they must pull off a series of dangerous heists to survive in a ruthless city. Explore a massive open world filled with life, drive cars, planes, and motorcycles, and switch between three unique protagonists to experience the story from multiple perspectives.",
+        "platforms": ["pc", "xbox", "playstation"]
     },
     {
         "title": "CS:GO",
         "category": ["popular","free"],
         "price": "$0.00",
         "imageName": "csgo",
-        "about": "Counter-Strike: Global Offensive expands on the team-based action gameplay that it pioneered more than 20 years ago."
+        "about": "Counter-Strike: Global Offensive expands on the team-based action gameplay that it pioneered more than 20 years ago. Play as terrorists or counter-terrorists and compete in bomb defusal, hostage rescue, and deathmatch modes. Featuring competitive matchmaking and a huge esports scene, CS:GO remains one of the most-played shooters in the world.",
+        "platforms": ["pc"]
     },
     {
         "title": "Hollow Knight",
         "category": ["popular","indie"],
         "price": "$10.00",
         "imageName": "hollowknight",
-        "about": "The sequel to the award-winning action-adventure. Explore a vast haunted kingdom and fight deadly foes as Hornet."
+        "about": "Descend into the ruined kingdom of Hallownest. Explore twisting caverns, ancient cities, and deadly wastes as the mysterious Hollow Knight. Face corrupted creatures, acquire powerful abilities, and uncover the secrets buried beneath the surface.",
+        "platforms": ["pc", "xbox", "playstation"]
     },
     {
         "title": "Elden Ring",
         "category": ["trending"],
         "price": "$59.99",
         "imageName": "eldenring",
-        "about": "An epic fantasy action-RPG adventure set within a world created by Hidetaka Miyazaki and George R. R. Martin."
+        "about": "Journey into the Lands Between, a vast fantasy world crafted by FromSoftware and George R. R. Martin. Customize your Tarnished character, master challenging combat, explore dungeons, and uncover the mystery of the shattered Elden Ring.",
+        "platforms": ["pc", "xbox", "playstation"]
     },
     {
         "title": "Valorant",
         "category": ["trending","free"],
         "price": "$0.00",
         "imageName": "valorant",
-        "about": "A 5v5 character-based tactical shooter from Riot Games. Combine precise gunplay with unique agent abilities."
+        "about": "A 5v5 tactical shooter where precise gunplay meets unique agent abilities. Choose from a growing roster of agents with special powers, strategize with your team, and outplay opponents in intense matches.",
+        "platforms": ["pc"]
     },
     {
         "title": "Stardew Valley",
         "category": ["indie"],
         "price": "$14.99",
         "imageName": "stardewvalley",
-        "about": "Turn an overgrown field into a thriving farm. Raise animals, grow crops, and become part of the community."
+        "about": "Escape to the countryside and build the farm of your dreams. Grow crops, raise animals, fish, craft, and form relationships with townspeople. Uncover hidden secrets as you restore your farm and become part of the community.",
+        "platforms": ["pc", "xbox", "playstation"]
     },
     {
         "title": "Minecraft",
         "category": ["popular"],
         "price": "$26.95",
         "imageName": "minecraft",
-        "about": "A sandbox game where you can explore infinite worlds and build everything from simple houses to grand castles."
+        "about": "Create and explore your own blocky world. Mine resources, craft tools, build incredible structures, and survive against monsters. Play solo or with friends across multiple platforms in endless possibilities.",
+        "platforms": ["pc", "xbox", "playstation"]
     },
     {
         "title": "Forza Horizon 5",
         "category": ["newLaunch"],
         "price": "$49.99",
         "imageName": "forzahorizon5",
-        "about": "Explore the vibrant open world landscapes of Mexico with limitless, fun driving action in hundreds of cars."
+        "about": "Race across the beautiful landscapes of Mexico in this open-world driving adventure. Collect hundreds of cars, participate in seasonal events, and customize your vehicles as you rise to the top of the Horizon Festival.",
+        "platforms": ["pc", "xbox"]
     },
     {
         "title": "Dead Cells",
         "category": ["indie"],
         "price": "$12.00",
         "imageName": "deadcells",
-        "about": "A rogue-lite, metroidvania-inspired action-platformer. Explore a sprawling, ever-changing castle."
+        "about": "A rogue-lite action-platformer where you explore a cursed, ever-changing castle. Learn enemy patterns, find powerful weapons, and push as far as you can before you die — and then try again with new upgrades.",
+        "platforms": ["pc", "xbox", "playstation"]
     },
     {
         "title": "Cyberpunk 2077",
         "category": ["popular"],
         "price": "$29.99",
         "imageName": "cyberpunk2077",
-        "about": "An open-world, action-adventure story set in Night City, a megalopolis obsessed with power, glamour, and body modification."
+        "about": "Step into Night City, a neon-drenched open world full of gangs, megacorporations, and cybernetic implants. Play as V, a mercenary outlaw seeking a one-of-a-kind implant that grants immortality. Choices you make shape the world around you.",
+        "platforms": ["pc", "xbox", "playstation"]
     },
     {
         "title": "Overwatch 2",
         "category": ["newLaunch","free"],
         "price": "$0.00",
         "imageName": "overwatch2",
-        "about": "Team up in this free-to-play hero shooter to push the payload and capture objectives with your friends."
+        "about": "Join a diverse roster of heroes in this free-to-play team-based shooter. Work together to capture objectives, push payloads, and unleash powerful ultimate abilities to lead your team to victory.",
+        "platforms": ["pc", "xbox", "playstation"]
     },
     {
         "title": "Rocket League",
         "category": ["free"],
         "price": "$0.00",
         "imageName": "rocketleague",
-        "about": "Soccer meets driving in this award-winning, high-powered hybrid of arcade-style soccer and vehicular mayhem!"
+        "about": "Play soccer with rocket-powered cars in this fast-paced, physics-driven sports game. Score goals, pull off aerial tricks, and compete online in ranked matches.",
+        "platforms": ["pc", "xbox", "playstation"]
+    },
+    {
+        "title": "Red Dead Redemption 2",
+        "category": ["popular"],
+        "price": "$39.99",
+        "imageName": "rdr2",
+        "about": "Step into the boots of Arthur Morgan, an outlaw on the run in a rapidly changing America. Explore a vast, realistic open world full of dynamic characters, missions, and moral choices.",
+        "platforms": ["pc", "xbox", "playstation"]
+    },
+    {
+        "title": "The Witcher 3: Wild Hunt",
+        "category": ["popular"],
+        "price": "$29.99",
+        "imageName": "witcher3",
+        "about": "Become Geralt of Rivia, a professional monster slayer, in this story-driven open world RPG. Hunt dangerous beasts, make morally complex decisions, and influence the fate of entire kingdoms.",
+        "platforms": ["pc", "xbox", "playstation"]
+    },
+    {
+        "title": "Sekiro: Shadows Die Twice",
+        "category": ["trending"],
+        "price": "$49.99",
+        "imageName": "sekiro",
+        "about": "Experience a brutal shinobi adventure set in Sengoku-era Japan. Master precision swordplay, use stealth to outsmart enemies, and face epic bosses in one of the most challenging action games ever.",
+        "platforms": ["pc", "xbox", "playstation"]
+    },
+    {
+        "title": "League of Legends",
+        "category": ["free"],
+        "price": "$0.00",
+        "imageName": "lol",
+        "about": "Compete in 5v5 matches where you and your team battle to destroy the enemy Nexus. Choose from over 160 champions with unique abilities and playstyles.",
+        "platforms": ["pc"]
+    },
+    {
+        "title": "Assassin's Creed Valhalla",
+        "category": ["popular"],
+        "price": "$49.99",
+        "imageName": "acvalhalla",
+        "about": "Become Eivor, a Viking warrior, and lead your clan to settle in England. Raid, fight, and grow your settlement while uncovering a hidden conflict between Assassins and Templars.",
+        "platforms": ["pc", "xbox", "playstation"]
+    },
+    {
+        "title": "Doom Eternal",
+        "category": ["popular"],
+        "price": "$29.99",
+        "imageName": "doom",
+        "about": "Rip and tear your way through hordes of demons in this adrenaline-fueled first-person shooter. Use powerful weapons, fast movement, and brutal finishers to save humanity.",
+        "platforms": ["pc", "xbox", "playstation"]
+    },
+    {
+        "title": "Hades",
+        "category": ["indie"],
+        "price": "$19.99",
+        "imageName": "hades",
+        "about": "Battle your way out of the Underworld as Zagreus, the son of Hades. Combine weapons, upgrades, and godly boons in this rogue-like dungeon crawler with a gripping story.",
+        "platforms": ["pc", "xbox", "playstation"]
+    },
+    {
+        "title": "Call of Duty: Modern Warfare II",
+        "category": ["newLaunch"],
+        "price": "$69.99",
+        "imageName": "mw2",
+        "about": "Join Task Force 141 in a globe-trotting campaign filled with cinematic action. Compete in multiplayer with a huge arsenal of weapons and fast-paced gunplay.",
+        "platforms": ["pc", "xbox", "playstation"]
     }
 ]

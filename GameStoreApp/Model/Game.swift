@@ -27,10 +27,17 @@ enum Category: String, CaseIterable, Codable {
         }
 }
 
+enum Platform: String, CaseIterable, Codable {
+    case pc
+    case xbox
+    case playstation
+}
+
 struct Game: Codable {
     let title: String
     let category: [Category]
     let price: String
     let imageName: String
     let about: String
+    let platforms: [Platform]
 }
