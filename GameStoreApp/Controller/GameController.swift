@@ -27,7 +27,7 @@ class GameController: UIViewController {
     }
     
     func updateUI(){
-        gameBackgroundImageView.image = UIImage(named: "battlefield3background")
+        gameBackgroundImageView.image = UIImage(named: "rdr2_page")
         nameLabel.text = gameInfo.title
         infoLabel.text = gameInfo.about
         priceLabel.text = gameInfo.price

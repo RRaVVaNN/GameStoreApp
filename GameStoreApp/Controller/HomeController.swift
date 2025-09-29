@@ -88,7 +88,7 @@ extension HomeController: UICollectionViewDataSource, UICollectionViewDelegateFl
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GameCell", for: indexPath) as! GameCell
-        cell.configure(game: searchedGames[indexPath.item])
+        cell.configure(game: searchedGames[indexPath.item], num: indexPath.item)
         return cell
     }
     
