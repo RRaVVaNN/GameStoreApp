@@ -13,8 +13,8 @@ class LoginController: UIViewController {
     @IBOutlet private weak var loginButton: UIButton!
     @IBOutlet private weak var registerButton: UIButton!
     
-    //  var users = [User]()
-    let manager = CoreDataManager()
+    private let userManager = UserDataManager()
+    private let manager = CoreDataManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,8 +46,11 @@ class LoginController: UIViewController {
         print(manager.users)
         let email = emailTextField.text ?? ""
         let password = passwordTextField.text ?? ""
-        if let user = manager.users.first (where: {$0.email == email }) {
+        if let user = manager.users.first (where: { $0.email == email }) {
             if user.password == password {
+                userManager.saveData(value: user.email ?? "", key: .username)
+                userManager.saveData(value: user.username ?? "", key: .email)
+                userManager.saveData(value: true, key: .isLoggedIn)
                 if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
                     if let delegate = windowScene.delegate as? SceneDelegate {
                         delegate.tabRoot()

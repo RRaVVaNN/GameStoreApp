@@ -27,12 +27,9 @@ class RegisterController: UIViewController {
         if let name = nameTextField.text, !name.isEmpty,
            let email = emailTextField.text, !email.isEmpty,
            let password = passwordTextField.text, !password.isEmpty {
-            print(manager.users)
             registerCallback?(email, password)
             manager.saveItem(name: name, email: email, password: password)
             navigationController?.popViewController(animated: true)
-        } else {
-            print(manager.users)
         }
     }
 }
