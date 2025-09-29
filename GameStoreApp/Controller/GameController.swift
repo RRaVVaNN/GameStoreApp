@@ -11,6 +11,10 @@ class GameController: UIViewController {
     @IBOutlet weak var gameBackgroundImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var infoLabel: UILabel!
+    @IBOutlet weak var pcIcon: UIImageView!
+    @IBOutlet weak var xboxIcon: UIImageView!
+    @IBOutlet weak var psIcon: UIImageView!
+    @IBOutlet weak var priceLabel: UILabel!
     
     var gameInfo : Game = .init(title: "", category: [], price: "", imageName: "", about: "", platforms: [])
     
@@ -26,6 +30,11 @@ class GameController: UIViewController {
         gameBackgroundImageView.image = UIImage(named: "battlefield3background")
         nameLabel.text = gameInfo.title
         infoLabel.text = gameInfo.about
+        priceLabel.text = gameInfo.price
+        
+        pcIcon.isHidden = !gameInfo.platforms.contains(.pc)
+        xboxIcon.isHidden = !gameInfo.platforms.contains(.xbox)
+        psIcon.isHidden = !gameInfo.platforms.contains(.playstation)
     }
 
     /*

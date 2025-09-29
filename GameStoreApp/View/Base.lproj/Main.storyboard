@@ -370,23 +370,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dab-7r-cVV">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dab-7r-cVV">
                                 <rect key="frame" x="0.0" y="118" width="393" height="212"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9lt-XC-ISo">
-                                <rect key="frame" x="32" y="342" width="329" height="24"/>
+                                <rect key="frame" x="32" y="342" width="51.333333333333343" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" systemColor="systemBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H2M-AI-NNm">
-                                <rect key="frame" x="32" y="414.33333333333331" width="329" height="20.333333333333314"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" systemColor="systemBackgroundColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About game" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MV3-ql-kdj">
-                                <rect key="frame" x="32" y="374" width="329" height="20.333333333333314"/>
+                                <rect key="frame" x="32" y="432" width="93" height="20.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" systemColor="systemBackgroundColor"/>
                                 <nil key="highlightedColor"/>
@@ -416,44 +410,87 @@
                                     <constraint firstAttribute="trailing" secondItem="ZS7-hJ-iIo" secondAttribute="trailing" id="vbp-Mt-aq5"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PFd-Bp-TWC">
+                                <rect key="frame" x="341" y="342" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="CIt-9C-jso"/>
+                                    <constraint firstAttribute="height" constant="32" id="Zhk-No-cCD"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system"/>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Ysz-4G-Ysf">
+                                <rect key="frame" x="32" y="374" width="96" height="32"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="desktopcomputer" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="qZj-NS-egx">
+                                        <rect key="frame" x="0.0" y="0.99999999999999822" width="32" height="30.666666666666664"/>
+                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="32" id="4Wc-QL-Ipb"/>
+                                            <constraint firstAttribute="height" constant="32" id="gSK-B8-CTb"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="playstation.logo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Aci-54-mHi">
+                                        <rect key="frame" x="32" y="0.6666666666666643" width="32" height="31"/>
+                                        <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xbox.logo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="o7g-RH-rbA">
+                                        <rect key="frame" x="64" y="0.6666666666666643" width="32" height="31"/>
+                                        <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H2M-AI-NNm">
+                                <rect key="frame" x="16" y="460.33333333333331" width="361" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="39h-gi-ohe"/>
                         <color key="backgroundColor" systemColor="labelColor"/>
                         <constraints>
-                            <constraint firstItem="9lt-XC-ISo" firstAttribute="width" secondItem="7GM-98-gY5" secondAttribute="width" multiplier="0.83715" id="7o7-fG-FJs"/>
-                            <constraint firstItem="H2M-AI-NNm" firstAttribute="top" secondItem="MV3-ql-kdj" secondAttribute="bottom" constant="20" id="85D-DI-shm"/>
-                            <constraint firstItem="MV3-ql-kdj" firstAttribute="top" secondItem="9lt-XC-ISo" secondAttribute="bottom" constant="8" id="9Sm-Lh-htf"/>
+                            <constraint firstItem="H2M-AI-NNm" firstAttribute="top" secondItem="MV3-ql-kdj" secondAttribute="bottom" constant="8" symbolic="YES" id="0Jy-x4-Ybd"/>
+                            <constraint firstItem="PFd-Bp-TWC" firstAttribute="top" secondItem="dab-7r-cVV" secondAttribute="bottom" constant="12" id="2Qs-GZ-wHe"/>
                             <constraint firstItem="8Ye-bC-huf" firstAttribute="leading" secondItem="39h-gi-ohe" secondAttribute="leading" constant="16" id="AkL-3V-ca2"/>
-                            <constraint firstItem="H2M-AI-NNm" firstAttribute="leading" secondItem="MV3-ql-kdj" secondAttribute="leading" id="Ies-oL-cws"/>
                             <constraint firstAttribute="trailing" secondItem="dab-7r-cVV" secondAttribute="trailing" id="MmO-Gy-YTg"/>
                             <constraint firstItem="dab-7r-cVV" firstAttribute="centerX" secondItem="7GM-98-gY5" secondAttribute="centerX" id="Nif-DQ-Gbh"/>
                             <constraint firstItem="39h-gi-ohe" firstAttribute="bottom" secondItem="8Ye-bC-huf" secondAttribute="bottom" id="Nk8-xt-oDO"/>
-                            <constraint firstItem="H2M-AI-NNm" firstAttribute="trailing" secondItem="MV3-ql-kdj" secondAttribute="trailing" id="PlW-pQ-8Sh"/>
-                            <constraint firstItem="9lt-XC-ISo" firstAttribute="top" secondItem="dab-7r-cVV" secondAttribute="bottom" constant="12" id="U0H-fN-JaD"/>
                             <constraint firstItem="dab-7r-cVV" firstAttribute="height" secondItem="7GM-98-gY5" secondAttribute="height" multiplier="0.248826" id="ZJB-ad-Vto"/>
-                            <constraint firstItem="MV3-ql-kdj" firstAttribute="centerX" secondItem="7GM-98-gY5" secondAttribute="centerX" id="aym-Ln-z4B"/>
+                            <constraint firstItem="Ysz-4G-Ysf" firstAttribute="leading" secondItem="9lt-XC-ISo" secondAttribute="leading" id="a0B-oI-HhU"/>
+                            <constraint firstItem="39h-gi-ohe" firstAttribute="trailing" secondItem="PFd-Bp-TWC" secondAttribute="trailing" constant="20" id="aZb-20-6fL"/>
                             <constraint firstItem="dab-7r-cVV" firstAttribute="leading" secondItem="7GM-98-gY5" secondAttribute="leading" id="b2c-jp-VSb"/>
+                            <constraint firstItem="MV3-ql-kdj" firstAttribute="top" secondItem="Ysz-4G-Ysf" secondAttribute="bottom" constant="26" id="dY1-P9-gs5"/>
+                            <constraint firstItem="MV3-ql-kdj" firstAttribute="leading" secondItem="9lt-XC-ISo" secondAttribute="leading" id="eRc-M2-B9f"/>
                             <constraint firstItem="39h-gi-ohe" firstAttribute="trailing" secondItem="8Ye-bC-huf" secondAttribute="trailing" constant="16" id="gRn-JT-5z4"/>
-                            <constraint firstItem="MV3-ql-kdj" firstAttribute="width" secondItem="7GM-98-gY5" secondAttribute="width" multiplier="0.83715" id="juq-5S-mq4"/>
+                            <constraint firstItem="9lt-XC-ISo" firstAttribute="top" secondItem="dab-7r-cVV" secondAttribute="bottom" constant="12" id="pNw-sr-6Du"/>
                             <constraint firstItem="dab-7r-cVV" firstAttribute="top" secondItem="39h-gi-ohe" secondAttribute="top" id="qwT-qI-k1x"/>
-                            <constraint firstItem="9lt-XC-ISo" firstAttribute="centerX" secondItem="7GM-98-gY5" secondAttribute="centerX" id="rft-8U-kCr"/>
+                            <constraint firstItem="39h-gi-ohe" firstAttribute="trailing" secondItem="H2M-AI-NNm" secondAttribute="trailing" constant="16" id="sdw-UO-lHV"/>
+                            <constraint firstItem="9lt-XC-ISo" firstAttribute="leading" secondItem="39h-gi-ohe" secondAttribute="leading" constant="32" id="tBw-3c-Nvt"/>
+                            <constraint firstItem="H2M-AI-NNm" firstAttribute="leading" secondItem="39h-gi-ohe" secondAttribute="leading" constant="16" id="tQT-3v-JGg"/>
+                            <constraint firstItem="Ysz-4G-Ysf" firstAttribute="top" secondItem="9lt-XC-ISo" secondAttribute="bottom" constant="8" id="zCX-V0-FsC"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="gameBackgroundImageView" destination="dab-7r-cVV" id="u7S-5t-vbI"/>
                         <outlet property="infoLabel" destination="H2M-AI-NNm" id="pzi-ZD-URP"/>
                         <outlet property="nameLabel" destination="9lt-XC-ISo" id="thf-ua-7NE"/>
+                        <outlet property="pcIcon" destination="qZj-NS-egx" id="rkx-YA-sCN"/>
+                        <outlet property="priceLabel" destination="ZS7-hJ-iIo" id="jnG-2g-cxH"/>
+                        <outlet property="psIcon" destination="o7g-RH-rbA" id="QhE-T5-YMc"/>
+                        <outlet property="xboxIcon" destination="Aci-54-mHi" id="LeR-Ap-Ros"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="puX-MF-GTp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4342.7480916030536" y="-370.42253521126764"/>
         </scene>
-        <!--Item-->
+        <!--Search-->
         <scene sceneID="MuG-V6-m9g">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ymP-jl-pYH" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="nBd-at-f4K"/>
+                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="nBd-at-f4K"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="LiC-Pf-Hbd">
                         <rect key="frame" x="0.0" y="118" width="393" height="44"/>
@@ -468,11 +505,11 @@
             </objects>
             <point key="canvasLocation" x="2544" y="-370"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="6rn-BB-Q30">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uDQ-Qw-CIf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="mIU-ho-all"/>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="mIU-ho-all"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rh4-Rl-gY9">
                         <rect key="frame" x="0.0" y="118" width="393" height="44"/>
@@ -489,8 +526,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="desktopcomputer" catalog="system" width="128" height="101"/>
         <image name="firstBackgroundCut" width="736" height="1308"/>
         <image name="gamePadd" width="512" height="512"/>
+        <image name="heart" catalog="system" width="128" height="107"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <image name="playstation.logo" catalog="system" width="128" height="93"/>
+        <image name="xbox.logo" catalog="system" width="128" height="123"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
