@@ -8,7 +8,7 @@
 import UIKit
 
 class CategoryCell: UICollectionViewCell {
-    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet private weak var titleLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

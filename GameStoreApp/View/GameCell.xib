@@ -23,7 +23,7 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="uncharted" translatesAutoresizingMaskIntoConstraints="NO" id="wne-d0-vCb">
                         <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
                     </imageView>
-                    <view alpha="0.14999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0hH-Uh-U4J">
+                    <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0hH-Uh-U4J">
                         <rect key="frame" x="0.0" y="80" width="120" height="40"/>
                         <color key="backgroundColor" systemColor="labelColor"/>
                         <constraints>
@@ -36,8 +36,8 @@
                         <color key="textColor" systemColor="systemBackgroundColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8kD-18-xtj">
-                        <rect key="frame" x="16" y="100" width="30.666666666666671" height="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="8kD-18-xtj">
+                        <rect key="frame" x="16" y="100" width="104" height="17"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" systemColor="systemYellowColor"/>
                         <nil key="highlightedColor"/>
@@ -55,6 +55,7 @@
                 <constraint firstAttribute="trailing" secondItem="wne-d0-vCb" secondAttribute="trailing" id="RWp-r5-6ts"/>
                 <constraint firstItem="MWq-cP-9P5" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Udf-wS-toU"/>
                 <constraint firstItem="0hH-Uh-U4J" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="WVn-Dc-C19"/>
+                <constraint firstAttribute="trailing" secondItem="8kD-18-xtj" secondAttribute="trailing" id="bRc-Ae-E2y"/>
                 <constraint firstItem="8kD-18-xtj" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="fgm-q4-L8A"/>
                 <constraint firstItem="DVq-gv-TXh" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="hB4-Tj-wsS"/>
                 <constraint firstItem="MWq-cP-9P5" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="hyr-dl-xeh"/>

@@ -38,6 +38,8 @@ struct Game: Codable {
     let category: [Category]
     let price: String
     let imageName: String
+    let pageImage: String
+    let basketImage: String
     let about: String
     let platforms: [Platform]
 }

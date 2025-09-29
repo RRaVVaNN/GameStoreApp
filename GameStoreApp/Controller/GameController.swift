@@ -16,7 +16,7 @@ class GameController: UIViewController {
     @IBOutlet weak var psIcon: UIImageView!
     @IBOutlet weak var priceLabel: UILabel!
     
-    var gameInfo : Game = .init(title: "", category: [], price: "", imageName: "", about: "", platforms: [])
+    var gameInfo : Game = .init(title: "", category: [], price: "", imageName: "", pageImage: "", basketImage: "", about: "", platforms: [])
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +27,7 @@ class GameController: UIViewController {
     }
     
     func updateUI(){
-        gameBackgroundImageView.image = UIImage(named: "rdr2_page")
+        gameBackgroundImageView.image = UIImage(named: gameInfo.pageImage)
         nameLabel.text = gameInfo.title
         infoLabel.text = gameInfo.about
         priceLabel.text = gameInfo.price

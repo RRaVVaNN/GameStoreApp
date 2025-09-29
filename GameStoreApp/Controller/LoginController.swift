@@ -62,20 +62,3 @@ class LoginController: UIViewController {
        
     }
 }
-
-/*
- for i in 0...(manager.users.count - 1) {
- if emailTextField.text == users[i].email && passwordTextField.text == users[i].password {
- if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
- if let delegate = windowScene.delegate as? SceneDelegate {
- delegate.tabRoot()
- }
- }
- } else if emailTextField.text == users[i].email && passwordTextField.text != users[i].password {
- showAlert(title: "Warning", message: "password is wrong.")
- } else {
- showAlert(title: "Warning", message: "There is no such a user.")
- }
- 
- }
- */

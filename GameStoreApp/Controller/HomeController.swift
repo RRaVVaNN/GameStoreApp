@@ -80,6 +80,9 @@ class HomeController: UIViewController, UITextFieldDelegate {
     
 }
 
+
+// MARK: - Cells
+
 extension HomeController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         searchedGames.count
