@@ -1,28 +1,28 @@
 //
-//  FavoriteCoreDataManager.swift
+//  CartCoreDataManager.swift
 //  GameStoreApp
 //
-//  Created by Ravan Asgarov on 29.09.25.
+//  Created by Ravan Asgarov on 30.09.25.
 //
 
 import UIKit
 
-class FavoriteCoreDataManager {
+class CartCoreDataManager {
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
-    var items = [Favorite]()
+    var items = [Cart]()
     
     func fetchItems() {
         do {
-            items = try context.fetch(Favorite.fetchRequest())
+            items = try context.fetch(Cart.fetchRequest())
         } catch  {
             print(error.localizedDescription)
         }
     }
     
     func saveItem(email: String, game: Game) {
-        let item = Favorite(context: context)
+        let item = Cart(context: context)
         
         item.mail = email
         item.gameTitle = game.title

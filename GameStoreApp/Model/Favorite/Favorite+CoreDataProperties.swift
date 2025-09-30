@@ -1,8 +1,8 @@
- //
+//
 //  Favorite+CoreDataProperties.swift
 //  GameStoreApp
 //
-//  Created by Ravan Asgarov on 26.09.25.
+//  Created by Ravan Asgarov on 30.09.25.
 //
 //
 
@@ -16,8 +16,10 @@ extension Favorite {
         return NSFetchRequest<Favorite>(entityName: "Favorite")
     }
 
-    @NSManaged public var mail: String?
     @NSManaged public var gameTitle: String?
+    @NSManaged public var mail: String?
+    @NSManaged public var gameImage: String?
+    @NSManaged public var gamePrice: String?
 
 }
 

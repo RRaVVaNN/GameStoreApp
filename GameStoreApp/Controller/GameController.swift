@@ -17,6 +17,7 @@ class GameController: UIViewController {
     @IBOutlet private weak var priceLabel: UILabel!
     @IBOutlet private weak var favoriteButton: UIButton!
     
+    private let cartManager = CartCoreDataManager()
     private let favoriteManager = FavoriteCoreDataManager()
     private let userManager = UserDataManager()
     //private var userFavoriteGames : [Favorite] {
@@ -26,9 +27,15 @@ class GameController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        title = "Game"
+
+            navigationController?.navigationBar.titleTextAttributes = [
+                .foregroundColor: UIColor.white,
+                .font: UIFont.boldSystemFont(ofSize: 22)
+            ]
         updateUI()
         favoriteManager.fetchItems()
+        cartManager.fetchItems()
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -44,7 +51,7 @@ class GameController: UIViewController {
     @IBAction func favoriteButtonPressed(_ sender: UIButton) {
         if let email = userManager.getString(key: .email) {
             if !favoriteManager.items.contains(where:  { $0.mail == email && $0.gameTitle == gameInfo.title }) {
-                favoriteManager.saveItem(email: email, title: gameInfo.title)
+                favoriteManager.saveItem(email: email, game: gameInfo)
                 updateFavoriteButton(isAdded: true)
             } else {
                 favoriteManager.deleteItems(email: email, title: gameInfo.title)
@@ -52,6 +59,12 @@ class GameController: UIViewController {
             }
         }
     }
+    @IBAction func addToCartPressed(_ sender: UIButton) {
+        if let email = userManager.getString(key: .email) {
+            cartManager.saveItem(email: email, game: gameInfo)
+        }
+    }
+    
     
     func updateUI(){
         gameBackgroundImageView.image = UIImage(named: gameInfo.pageImage)

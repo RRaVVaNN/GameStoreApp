@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="23788.4" systemVersion="24F74" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="A" representedClassName="A" syncable="YES">
+        <attribute name="a" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Cart" representedClassName="Cart" syncable="YES">
+        <attribute name="gameImage" optional="YES" attributeType="String"/>
+        <attribute name="gamePrice" optional="YES" attributeType="String"/>
+        <attribute name="gameTitle" optional="YES" attributeType="String"/>
+        <attribute name="mail" optional="YES" attributeType="String"/>
+    </entity>
     <entity name="Favorite" representedClassName="Favorite" syncable="YES">
+        <attribute name="gameImage" optional="YES" attributeType="String"/>
+        <attribute name="gamePrice" optional="YES" attributeType="String"/>
         <attribute name="gameTitle" optional="YES" attributeType="String"/>
         <attribute name="mail" optional="YES" attributeType="String"/>
     </entity>

@@ -17,10 +17,15 @@ class gameTableCell: UITableViewCell {
         // Initialization code
     }
 
-    func configure(game: Game) {
-        gameImage.image = UIImage(named: game.basketImage)
-        gameLabel.text = game.title
-        priceTitle.text = game.price
+    func configureFavorite(game: Favorite) {
+        gameImage.image = UIImage(named: game.gameImage ?? "")
+        gameLabel.text = game.gameTitle
+        priceTitle.text = game.gamePrice
+    }
+    func configureCart(game: Cart) {
+        gameImage.image = UIImage(named: game.gameImage ?? "")
+        gameLabel.text = game.gameTitle
+        priceTitle.text = game.gamePrice
     }
     
 }
