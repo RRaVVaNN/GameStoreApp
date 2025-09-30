@@ -62,6 +62,7 @@ class GameController: UIViewController {
     @IBAction func addToCartPressed(_ sender: UIButton) {
         if let email = userManager.getString(key: .email) {
             cartManager.saveItem(email: email, game: gameInfo)
+            showNotification(title: "Game", message: "Game is added successfully ")
         }
     }
     

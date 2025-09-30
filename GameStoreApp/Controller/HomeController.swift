@@ -27,10 +27,10 @@ class HomeController: UIViewController, UITextFieldDelegate {
         
         title = "Search"
 
-            navigationController?.navigationBar.titleTextAttributes = [
-                .foregroundColor: UIColor.white,
-                .font: UIFont.boldSystemFont(ofSize: 22)
-            ]
+        navigationController?.navigationBar.titleTextAttributes = [
+            .foregroundColor: UIColor.white,
+            .font: UIFont.boldSystemFont(ofSize: 22)
+        ]
         
         searchTextField.delegate = self
         searchTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)

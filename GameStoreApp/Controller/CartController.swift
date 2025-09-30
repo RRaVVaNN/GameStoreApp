@@ -9,8 +9,8 @@ import UIKit
 
 class CartController: UIViewController {
     
-    @IBOutlet weak var table: UITableView!
-    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet private weak var table: UITableView!
+    @IBOutlet private weak var priceLabel: UILabel!
     
     private let cartManager = CartCoreDataManager()
     private let userManager = UserDataManager()
@@ -19,13 +19,13 @@ class CartController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         title = "Cart"
-
-            navigationController?.navigationBar.titleTextAttributes = [
-                .foregroundColor: UIColor.white,
-                .font: UIFont.boldSystemFont(ofSize: 22)
-            ]
+        
+        navigationController?.navigationBar.titleTextAttributes = [
+            .foregroundColor: UIColor.white,
+            .font: UIFont.boldSystemFont(ofSize: 22)
+        ]
         
         cartManager.fetchItems()
         table.dataSource = self
@@ -36,6 +36,9 @@ class CartController: UIViewController {
         cartManager.fetchItems()
         setUpWishListItems()
         setUpTableView()
+    }
+    @IBAction func payButtonPressed(_ sender: UIButton) {
+        showNotification(title: "Payment", message: "Games have been bought successfully.")
     }
     
     func setUpTableView() {
@@ -52,7 +55,7 @@ class CartController: UIViewController {
             table.reloadData()
         }
     }
-
+    
 }
 
 //MARK: - CELL
@@ -67,5 +70,16 @@ extension CartController: UITableViewDataSource, UITableViewDelegate {
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         100
+    }
+    func tableView(_ tableView: UITableView,
+                   commit editingStyle: UITableViewCell.EditingStyle,
+                   forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            if let email = userManager.getString(key: .email),
+               let title = cartGames[indexPath.row].gameTitle {
+                cartManager.deleteItems(email: email, title: title )
+                setUpWishListItems()
+            }
+        }
     }
 }

@@ -15,23 +15,20 @@ class WishListController: UIViewController {
     private var wishListGames = [Favorite]()
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
-
+        overrideUserInterfaceStyle = .light
         title = "WishList"
 
-            navigationController?.navigationBar.titleTextAttributes = [
-                .foregroundColor: UIColor.white,
-                .font: UIFont.boldSystemFont(ofSize: 22)
-            ]
-
+        navigationController?.navigationBar.titleTextAttributes = [
+            .foregroundColor: UIColor.white,
+            .font: UIFont.boldSystemFont(ofSize: 22)
+        ]
+        
         wishListManager.fetchItems()
         table.dataSource = self
         table.delegate = self
-        
-        
-        
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         wishListManager.fetchItems()
         setUpWishListItems()
@@ -48,16 +45,6 @@ class WishListController: UIViewController {
            // wishListGames = allGames.filter { $0.title == wi }
         }
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 //MARK: - CELL

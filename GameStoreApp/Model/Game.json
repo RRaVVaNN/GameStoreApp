@@ -32,7 +32,7 @@
     {
         "title": "Elden Ring",
         "category": ["trending"],
-        "price": "59.99",
+        "price": "59.00",
         "imageName": "eldenring",
         "pageImage": "eldenring_page",
         "basketImage": "eldenring_basket",
@@ -52,7 +52,7 @@
     {
         "title": "Stardew Valley",
         "category": ["indie"],
-        "price": "14.99",
+        "price": "14.90",
         "imageName": "stardewvalley",
         "pageImage": "stardewvalley_page",
         "basketImage": "stardewvalley_basket",
@@ -62,7 +62,7 @@
     {
         "title": "Minecraft",
         "category": ["popular"],
-        "price": "26.95",
+        "price": "26.90",
         "imageName": "minecraft",
         "pageImage": "minecraft_page",
         "basketImage": "minecraft_basket",
@@ -72,7 +72,7 @@
     {
         "title": "Forza Horizon 5",
         "category": ["newLaunch"],
-        "price": "49.99",
+        "price": "49.90",
         "imageName": "forzahorizon5",
         "pageImage": "forzahorizon5_page",
         "basketImage": "forzahorizon5_basket",
@@ -92,7 +92,7 @@
     {
         "title": "Cyberpunk 2077",
         "category": ["popular"],
-        "price": "29.99",
+        "price": "29.90",
         "imageName": "cyberpunk2077",
         "pageImage": "cyberpunk2077_page",
         "basketImage": "cyberpunk2077_basket",
@@ -122,7 +122,7 @@
     {
         "title": "Red Dead Redemption 2",
         "category": ["popular"],
-        "price": "39.99",
+        "price": "39.90",
         "imageName": "rdr2",
         "pageImage": "rdr2_page",
         "basketImage": "rdr2_basket",
@@ -132,7 +132,7 @@
     {
         "title": "The Witcher 3: Wild Hunt",
         "category": ["popular"],
-        "price": "24.99",
+        "price": "24.90",
         "imageName": "witcher3",
         "pageImage": "witcher3_page",
         "basketImage": "witcher3_basket",
@@ -142,7 +142,7 @@
     {
         "title": "Sekiro: Shadows Die Twice",
         "category": ["trending"],
-        "price": "39.99",
+        "price": "39.90",
         "imageName": "sekiro",
         "pageImage": "sekiro_page",
         "basketImage": "sekiro_basket",
@@ -162,7 +162,7 @@
     {
         "title": "Assassin's Creed Valhalla",
         "category": ["popular"],
-        "price": "49.99",
+        "price": "49.90",
         "imageName": "acvalhalla",
         "pageImage": "acvalhalla_page",
         "basketImage": "acvalhalla_basket",
@@ -172,7 +172,7 @@
     {
         "title": "DOOM Eternal",
         "category": ["trending"],
-        "price": "39.99",
+        "price": "39.90",
         "imageName": "doom",
         "pageImage": "doometernal_page",
         "basketImage": "doometernal_basket",
@@ -182,7 +182,7 @@
     {
         "title": "Hades",
         "category": ["indie"],
-        "price": "24.99",
+        "price": "24.90",
         "imageName": "hades",
         "pageImage": "hades_page",
         "basketImage": "hades_basket",
@@ -192,7 +192,7 @@
     {
         "title": "Call of Duty: Modern Warfare II",
         "category": ["trending"],
-        "price": "69.99",
+        "price": "69.90",
         "imageName": "mw2",
         "pageImage": "mw2_page",
         "basketImage": "mw2_basket",
@@ -202,7 +202,7 @@
     {
         "title": "Uncharted 4: A Thief's End",
         "category": ["popular"],
-        "price": "29.99",
+        "price": "29.90",
         "imageName": "uncharted4",
         "pageImage": "uncharted4_page",
         "basketImage": "uncharted4_basket",

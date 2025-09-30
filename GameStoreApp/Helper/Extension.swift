@@ -19,4 +19,14 @@ extension UIViewController {
         alertController.addAction(cancel)
         present(alertController, animated: true)
     }
+    
+    func showNotification(title: String, message: String) {
+        let alertController = UIAlertController(title: title,
+                                                message: message,
+                                                preferredStyle: .alert)
+        let ok = UIAlertAction(title: "Okay", style: .default)
+        
+        alertController.addAction(ok)
+        present(alertController, animated: true)
+    }
 }
