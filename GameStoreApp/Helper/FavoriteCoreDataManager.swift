@@ -28,7 +28,22 @@ class FavoriteCoreDataManager {
         item.gameTitle = title
         do {
             try context.save()
+            fetchItems()
+            print("item saved")
         } catch  {
+            print(error.localizedDescription)
+        }
+    }
+    
+    func deleteItems(email: String, title: String) {
+        let item = items.first{ $0.mail == email && $0.gameTitle == title }
+        context.delete(item!)
+        print("item deleted")
+        do {
+            try context.save()
+            print("deleted item saved")
+            fetchItems()
+        } catch {
             print(error.localizedDescription)
         }
     }

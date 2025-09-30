@@ -18,8 +18,11 @@ class UserDataManager {
         UserDefaults.standard.set(value, forKey: key.rawValue)
     }
     
-    func getData(key: UserDefaultsType) -> Any? {
-        UserDefaults.standard.object(forKey: key.rawValue)
+    func getString(key: UserDefaultsType) -> String? {
+        UserDefaults.standard.string(forKey: key.rawValue)
+    }
+    func getBool(key: UserDefaultsType) -> Bool {
+        UserDefaults.standard.bool(forKey: key.rawValue)
     }
     
     func removeAllData() {
