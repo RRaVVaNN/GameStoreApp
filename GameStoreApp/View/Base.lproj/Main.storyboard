@@ -287,17 +287,32 @@
             </objects>
             <point key="canvasLocation" x="1599" y="4"/>
         </scene>
-        <!--View Controller-->
+        <!--Wish List Controller-->
         <scene sceneID="1Oq-3q-SH6">
             <objects>
-                <viewController id="7UV-Vi-ekc" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WishListController" id="7UV-Vi-ekc" customClass="WishListController" customModule="GameStoreApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MUs-tN-Y8c">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="t1g-In-R9n">
+                                <rect key="frame" x="0.0" y="162" width="393" height="573"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="7hB-Hz-pXQ"/>
                         <color key="backgroundColor" systemColor="labelColor"/>
+                        <constraints>
+                            <constraint firstItem="t1g-In-R9n" firstAttribute="top" secondItem="7hB-Hz-pXQ" secondAttribute="top" id="LaZ-Bz-EM4"/>
+                            <constraint firstItem="7hB-Hz-pXQ" firstAttribute="trailing" secondItem="t1g-In-R9n" secondAttribute="trailing" id="WBP-gO-tIn"/>
+                            <constraint firstItem="t1g-In-R9n" firstAttribute="leading" secondItem="7hB-Hz-pXQ" secondAttribute="leading" id="exI-N8-AuF"/>
+                            <constraint firstItem="7hB-Hz-pXQ" firstAttribute="bottom" secondItem="t1g-In-R9n" secondAttribute="bottom" id="mZ3-NL-7PT"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="pbG-Pw-gy4"/>
+                    <connections>
+                        <outlet property="table" destination="t1g-In-R9n" id="wU0-Db-WoL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hv6-59-pjS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
