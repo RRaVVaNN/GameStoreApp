@@ -62,5 +62,16 @@ extension WishListController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         100
     }
+    func tableView(_ tableView: UITableView,
+                   commit editingStyle: UITableViewCell.EditingStyle,
+                   forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            if let email = userManager.getString(key: .email),
+               let title = wishListGames[indexPath.row].gameTitle {
+                wishListManager.deleteItems(email: email, title: title )
+                setUpWishListItems()
+            }
+        }
+    }
 }
 
