@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProfileController: UIViewController {
+class ProfileController: BaseViewController {
     @IBOutlet private weak var usernameLabel: UILabel!
     @IBOutlet private weak var emailLabel: UILabel!
     @IBOutlet private weak var gamesCountLabel: UILabel!
@@ -18,7 +18,8 @@ class ProfileController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        updateTitle(title: "GameLand")
         userCoreDataManager.fetchItems()
         gamesDataManager.fetchItems()
         updateUI()

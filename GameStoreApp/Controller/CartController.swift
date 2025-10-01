@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CartController: UIViewController {
+class CartController: BaseViewController {
     
     @IBOutlet private weak var table: UITableView!
     @IBOutlet private weak var priceLabel: UILabel!
@@ -20,14 +20,8 @@ class CartController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Cart"
+        updateTitle(title: "Cart")
         
-        navigationController?.navigationBar.titleTextAttributes = [
-            .foregroundColor: UIColor.white,
-            .font: UIFont.boldSystemFont(ofSize: 22)
-        ]
-        
-        cartManager.fetchItems()
         table.dataSource = self
         table.delegate = self
     }

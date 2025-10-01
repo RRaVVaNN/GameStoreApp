@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GameController: UIViewController {
+class GameController: BaseViewController {
     @IBOutlet private weak var gameBackgroundImageView: UIImageView!
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var infoLabel: UILabel!
@@ -27,16 +27,11 @@ class GameController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Game"
-
-            navigationController?.navigationBar.titleTextAttributes = [
-                .foregroundColor: UIColor.white,
-                .font: UIFont.boldSystemFont(ofSize: 22)
-            ]
+        
+        updateTitle(title: "Game")
         updateUI()
         favoriteManager.fetchItems()
         cartManager.fetchItems()
-        // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
       //  favoriteManager.fetchItems()
@@ -49,6 +44,15 @@ class GameController: UIViewController {
         }
     }
     @IBAction func favoriteButtonPressed(_ sender: UIButton) {
+        updateFavorite { email in
+            favoriteManager.saveItem(email: email, game: gameInfo)
+            updateFavoriteButton(isAdded: true)
+        } complation2: { email in
+            favoriteManager.deleteItems(email: email, title: gameInfo.title)
+            updateFavoriteButton(isAdded: false)
+        }
+
+        /*
         if let email = userManager.getString(key: .email) {
             if !favoriteManager.items.contains(where:  { $0.mail == email && $0.gameTitle == gameInfo.title }) {
                 favoriteManager.saveItem(email: email, game: gameInfo)
@@ -57,7 +61,7 @@ class GameController: UIViewController {
                 favoriteManager.deleteItems(email: email, title: gameInfo.title)
                 updateFavoriteButton(isAdded: false)
             }
-        }
+        */
     }
     @IBAction func addToCartPressed(_ sender: UIButton) {
         if let email = userManager.getString(key: .email) {
@@ -78,6 +82,16 @@ class GameController: UIViewController {
         psIcon.isHidden = !gameInfo.platforms.contains(.playstation)
         
             
+    }
+    
+    func updateFavorite(complation1: ((String) -> Void), complation2: ((String) -> Void)) {
+        if let email = userManager.getString(key: .email) {
+            if !favoriteManager.items.contains(where:  { $0.mail == email && $0.gameTitle == gameInfo.title }) {
+                complation1(email)
+            } else {
+                complation2(email)
+            }
+        }
     }
     
     func updateFavoriteButton(isAdded: Bool) {

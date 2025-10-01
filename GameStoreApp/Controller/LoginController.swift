@@ -18,20 +18,12 @@ class LoginController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        manager.fetchItems()
+    
     }
     
     override func viewWillAppear(_ animated: Bool) {
         manager.fetchItems()
     }
-    
-    //    func configureManager() {
-    //        manager.completion = { users in
-    //            self.users = users
-    //        }
-    //        manager.fetchItems()
-    //    }
     
     @IBAction func registerButtonPressed(_ sender: UIButton) {
         let regController = storyboard?.instantiateViewController(withIdentifier: "RegisterController") as! RegisterController

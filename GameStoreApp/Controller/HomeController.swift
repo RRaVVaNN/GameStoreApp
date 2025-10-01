@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeController: UIViewController, UITextFieldDelegate {
+class HomeController: BaseViewController, UITextFieldDelegate {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var searchTextField: UITextField!
     
@@ -25,12 +25,7 @@ class HomeController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Search"
-
-        navigationController?.navigationBar.titleTextAttributes = [
-            .foregroundColor: UIColor.white,
-            .font: UIFont.boldSystemFont(ofSize: 22)
-        ]
+        updateTitle(title: "Search")
         
         searchTextField.delegate = self
         searchTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
