@@ -7,7 +7,7 @@
 
 import UIKit
 
-class WishListController: UIViewController {
+class WishListController: BaseViewController {
     
     @IBOutlet private weak var table: UITableView!
     private let wishListManager = FavoriteCoreDataManager()
@@ -17,7 +17,7 @@ class WishListController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        updateTitle(title: "WishList")
         
         wishListManager.fetchItems()
         table.dataSource = self

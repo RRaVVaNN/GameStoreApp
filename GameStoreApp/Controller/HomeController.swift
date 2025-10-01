@@ -10,6 +10,7 @@ import UIKit
 class HomeController: BaseViewController, UITextFieldDelegate {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var searchTextField: UITextField!
+    @IBOutlet weak var searchView: UIView!
     
     private var allGames: [Game] = []
     private var searchedGames: [Game] = []
@@ -28,7 +29,7 @@ class HomeController: BaseViewController, UITextFieldDelegate {
         updateTitle(title: "Search")
         searchTextField.delegate = self
         searchTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
-        setupCollectionView()
+        setupUI()
         getGameData()
         searchedGames = allGames
     }
@@ -57,7 +58,7 @@ class HomeController: BaseViewController, UITextFieldDelegate {
             print(error.localizedDescription)
         }
     }
-    private func setupCollectionView() {
+    private func setupUI() {
         let gameNib = UINib(nibName: "GameCell", bundle: nil)
         collectionView.register(gameNib, forCellWithReuseIdentifier: "GameCell")
         
@@ -75,6 +76,8 @@ class HomeController: BaseViewController, UITextFieldDelegate {
         collectionView.backgroundColor = .clear
         collectionView.dataSource = self
         collectionView.delegate = self
+        
+        searchView.layer.cornerRadius = 18
     }
     
 }

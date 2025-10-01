@@ -79,7 +79,7 @@ class GameController: BaseViewController {
             favoriteButton.tintColor = .red
         } else {
             favoriteButton.setImage(UIImage(systemName: "heart"), for: .normal)
-            favoriteButton.tintColor = .systemBackground
+            favoriteButton.tintColor = .white
         }
         
     }
