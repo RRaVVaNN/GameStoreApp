@@ -26,14 +26,11 @@ class HomeController: BaseViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         updateTitle(title: "Search")
-        
         searchTextField.delegate = self
         searchTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
         setupCollectionView()
-        //setupSampleData()
         getGameData()
         searchedGames = allGames
-        // Do any additional setup after loading the view.
     }
 
     @objc func textFieldDidChange() {

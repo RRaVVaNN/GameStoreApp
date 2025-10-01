@@ -20,9 +20,7 @@ class GameController: BaseViewController {
     private let cartManager = CartCoreDataManager()
     private let favoriteManager = FavoriteCoreDataManager()
     private let userManager = UserDataManager()
-    //private var userFavoriteGames : [Favorite] {
-   //     favoriteManager.items.filter { $0.mail == userManager.getString(key: .email) }
-  //  }
+    
     var gameInfo : Game = .init(title: "", category: [], price: "", imageName: "", pageImage: "", basketImage: "", about: "", platforms: [])
     
     override func viewDidLoad() {
@@ -34,25 +32,9 @@ class GameController: BaseViewController {
         cartManager.fetchItems()
     }
     override func viewWillAppear(_ animated: Bool) {
-      //  favoriteManager.fetchItems()
-        if let email = userManager.getString(key: .email) {
-            if favoriteManager.items.contains(where:  { $0.mail == email && $0.gameTitle == gameInfo.title }) {
-                updateFavoriteButton(isAdded: true)
-            } else {
-                updateFavoriteButton(isAdded: false)
-            }
-        }
+        startFavoriteButton()
     }
     @IBAction func favoriteButtonPressed(_ sender: UIButton) {
-        updateFavorite { email in
-            favoriteManager.saveItem(email: email, game: gameInfo)
-            updateFavoriteButton(isAdded: true)
-        } complation2: { email in
-            favoriteManager.deleteItems(email: email, title: gameInfo.title)
-            updateFavoriteButton(isAdded: false)
-        }
-
-        /*
         if let email = userManager.getString(key: .email) {
             if !favoriteManager.items.contains(where:  { $0.mail == email && $0.gameTitle == gameInfo.title }) {
                 favoriteManager.saveItem(email: email, game: gameInfo)
@@ -61,7 +43,7 @@ class GameController: BaseViewController {
                 favoriteManager.deleteItems(email: email, title: gameInfo.title)
                 updateFavoriteButton(isAdded: false)
             }
-        */
+        }
     }
     @IBAction func addToCartPressed(_ sender: UIButton) {
         if let email = userManager.getString(key: .email) {
@@ -69,7 +51,6 @@ class GameController: BaseViewController {
             showNotification(title: "Game", message: "Game is added successfully ")
         }
     }
-    
     
     func updateUI(){
         gameBackgroundImageView.image = UIImage(named: gameInfo.pageImage)
@@ -81,19 +62,17 @@ class GameController: BaseViewController {
         xboxIcon.isHidden = !gameInfo.platforms.contains(.xbox)
         psIcon.isHidden = !gameInfo.platforms.contains(.playstation)
         
-            
+        
     }
-    
-    func updateFavorite(complation1: ((String) -> Void), complation2: ((String) -> Void)) {
+    func startFavoriteButton() {
         if let email = userManager.getString(key: .email) {
-            if !favoriteManager.items.contains(where:  { $0.mail == email && $0.gameTitle == gameInfo.title }) {
-                complation1(email)
+            if favoriteManager.items.contains(where:  { $0.mail == email && $0.gameTitle == gameInfo.title }) {
+                updateFavoriteButton(isAdded: true)
             } else {
-                complation2(email)
+                updateFavoriteButton(isAdded: false)
             }
         }
     }
-    
     func updateFavoriteButton(isAdded: Bool) {
         if isAdded {
             favoriteButton.setImage(UIImage(systemName: "heart.fill" ), for: .normal)
@@ -102,7 +81,8 @@ class GameController: BaseViewController {
             favoriteButton.setImage(UIImage(systemName: "heart"), for: .normal)
             favoriteButton.tintColor = .systemBackground
         }
-
+        
     }
-    
+    func getGame(gameTitle: String){
+    }
 }

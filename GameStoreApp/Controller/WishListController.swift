@@ -16,13 +16,8 @@ class WishListController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        overrideUserInterfaceStyle = .light
-        title = "WishList"
-
-        navigationController?.navigationBar.titleTextAttributes = [
-            .foregroundColor: UIColor.white,
-            .font: UIFont.boldSystemFont(ofSize: 22)
-        ]
+        
+        
         
         wishListManager.fetchItems()
         table.dataSource = self
